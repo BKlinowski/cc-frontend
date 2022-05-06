@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+  background-color: var(--yellow-color);
+}
+
+:root {
+  --red-color: #FF8064;
+  --orange-color: #FFB88B;
+  --yellow-color: #FFE7B3;
+  --lyellow-color: rgb(255, 241, 210);
+  --lgreen-color: #E8FFAF;
+  --green-color: #A8EB95;
+  --textarea-commands: 15px;
+
+  --background-color: #e7e7de;
+  --textarea-color: #e5e5e5;
+  --textarea-stroke: #8d8d8d;
+  --menu-background-color: #00587a;
+  --menu-item-color: #006e75;
+  --menu-subitem-color: #008891;
+  --menu-subitem-color-hover: #00757e;
+  --textarea-margins: 15px;
+  --input-background: #cecece;
+  --input-stroke: #646464;
+}
+
+html {
+  overflow-y: overlay;
+}

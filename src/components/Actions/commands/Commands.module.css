@@ -1,0 +1,4 @@
+.Commands {
+    width: calc(100% - (var(--commands-margins) * 2));
+    margin: (var(--commands-margins));
+}

@@ -1,0 +1,9 @@
+.Input {
+    align-self: center;
+    justify-self: center;
+    width: 80%;
+    font-family: inherit;
+    padding: 5px;
+    background-color: var(--lyellow-color);
+    outline: none;
+}

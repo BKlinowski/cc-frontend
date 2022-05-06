@@ -1,0 +1,5 @@
+.Actions {
+    display: grid;
+    grid-template-rows: 6fr 1fr;
+    height: 100vh;
+}
