@@ -1,4 +1,8 @@
 .Command {
+    display: block;
+    list-style-type: none;
     width: 100%;
-    height: 3rem;
+    padding: 10px 5px;
+    background-color: var(--green-color);
+    margin-top: 5px;
 }

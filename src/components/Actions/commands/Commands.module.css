@@ -1,4 +1,13 @@
 .Commands {
-    width: calc(100% - (var(--commands-margins) * 2));
-    margin: (var(--commands-margins));
+    align-self: flex-start;
+    justify-self: center;
+    width: 80%;
+    margin-top: 15px;
+    padding: 5px;
+    max-height: 80vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    /* width: calc(100% - (var(--commands-margins) * 2));
+    margin: (var(--commands-margins)); */
 }

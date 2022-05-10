@@ -3,7 +3,7 @@ import classes from './Input.module.css'
 const Input = props => {
     return (
         <>
-            <input className={classes.Input} onKeyDown={props.onSubmitHandler} />
+            <input onChange={props.onChange} value={props.value} ref={props.ref} className={classes.Input} onKeyDown={props.onSubmitHandler} />
         </>
     )
 }

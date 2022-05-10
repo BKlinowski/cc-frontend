@@ -1,5 +1,5 @@
 .Input {
-    align-self: center;
+    align-self: flex-start;
     justify-self: center;
     width: 80%;
     font-family: inherit;

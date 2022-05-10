@@ -1,0 +1,55 @@
+.Generator {
+    display: grid;
+    grid-template-rows: 6fr 1fr 1fr;
+    grid-auto-columns: minmax(0, 1fr);
+    grid-auto-flow: column;
+    height: 100vh;
+}
+
+.Input {
+    width: 210px;
+    height: 30px;
+    padding: 5px;
+    background-color: var(--lyellow-color);
+    outline: none;
+    justify-self: center;
+    align-self: center;
+    grid-row: 2 / 3;
+}
+
+.ButtonPayload {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    justify-self: center;
+    align-self: center;
+    width: 250px;
+    height: 50px;
+}
+
+.Form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ButtonDownload {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    justify-self: center;
+    align-self: center;
+    width: 250px;
+    height: 50px;
+}
+
+.Pre {
+    justify-self: center;
+    overflow-y: scroll;
+    grid-column: 1 / 3;
+    width: 100%;
+}
+
+.InputDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
