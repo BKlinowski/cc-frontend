@@ -7,7 +7,9 @@ const Commands = props => {
         <ul className={classes.Commands}>
             {
                 props.commands.map((command, i) => {
-                    return <Command key={i}>{command}</Command>
+                    return (
+                        <Command key={i}>{command}</Command>
+                    )
                 })
             }
         </ul>

